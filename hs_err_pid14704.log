@@ -1,0 +1,166 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=14704, tid=0x0000000000006b74
+#
+# JRE version:  (8.0_282-b08) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.282-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003217800):  JavaThread "Unknown thread" [_thread_in_vm, id=27508, stack(0x00000000030b0000,0x00000000031b0000)]
+
+Stack: [0x00000000030b0000,0x00000000031b0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000003217800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=27508, stack(0x00000000030b0000,0x00000000031b0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5580000, 0x00000000d8000000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5580000,0x00000000d5626670,0x00000000d7600000)
+  from space 5120K, 0% used [0x00000000d7b00000,0x00000000d7b00000,0x00000000d8000000)
+  to   space 5120K, 0% used [0x00000000d7600000,0x00000000d7600000,0x00000000d7b00000)
+ ParOldGen       total 87552K, used 0K [0x0000000080000000, 0x0000000085580000, 0x00000000d5580000)
+  object space 87552K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085580000)
+ Metaspace       used 801K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 77K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012780000,0x0000000012b90000] byte_map_base: 0x0000000012380000
+
+Marking Bits: (ParMarkBitMap*) 0x000000005e311f00
+ Begin Bits: [0x0000000013640000, 0x0000000015640000)
+ End Bits:   [0x0000000015640000, 0x0000000017640000)
+
+Polling page: 0x00000000013e0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x00000000033c0000, 0x0000000003630000, 0x00000000123c0000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.080 loading class java/lang/Short
+Event: 0.080 loading class java/lang/Short done
+Event: 0.080 loading class java/lang/Integer
+Event: 0.081 loading class java/lang/Integer done
+Event: 0.081 loading class java/lang/Long
+Event: 0.081 loading class java/lang/Long done
+Event: 0.083 loading class java/lang/NullPointerException
+Event: 0.083 loading class java/lang/NullPointerException done
+Event: 0.083 loading class java/lang/ArithmeticException
+Event: 0.083 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7425b0000 - 0x00007ff7425e5000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\javaw.exe
+0x00007ffed0de0000 - 0x00007ffed0fd0000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffecf190000 - 0x00007ffecf242000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffecde50000 - 0x00007ffece0f5000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffecbb00000 - 0x00007ffecbb8f000 	C:\Windows\SYSTEM32\apphelp.dll
+0x00007ffecf250000 - 0x00007ffecf2f3000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffecff50000 - 0x00007ffecffee000 	C:\Windows\System32\msvcrt.dll
+0x00007ffed0230000 - 0x00007ffed02c7000 	C:\Windows\System32\sechost.dll
+0x00007ffed0a40000 - 0x00007ffed0b5f000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffecf640000 - 0x00007ffecf7d4000 	C:\Windows\System32\USER32.dll
+0x00007ffecedd0000 - 0x00007ffecedf1000 	C:\Windows\System32\win32u.dll
+0x00007ffecfff0000 - 0x00007ffed0016000 	C:\Windows\System32\GDI32.dll
+0x00007ffece200000 - 0x00007ffece398000 	C:\Windows\System32\gdi32full.dll
+0x00007ffece160000 - 0x00007ffece1fe000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffecdd50000 - 0x00007ffecde4a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffe9f330000 - 0x00007ffe9f5b4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1556_none_9e7e372fe45e41d5\COMCTL32.dll
+0x00007ffecf300000 - 0x00007ffecf636000 	C:\Windows\System32\combase.dll
+0x00007ffecee00000 - 0x00007ffecee81000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffed0d10000 - 0x00007ffed0d3e000 	C:\Windows\System32\IMM32.DLL
+0x00000000016f0000 - 0x0000000001704000 	C:\Windows\System32\umppc15005.dll
+0x000000005d8f0000 - 0x000000005d9c2000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\msvcr100.dll
+0x000000005dad0000 - 0x000000005e395000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\server\jvm.dll
+0x00007ffed08b0000 - 0x00007ffed08b8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffe91dc0000 - 0x00007ffe91dc9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffed0b60000 - 0x00007ffed0bcf000 	C:\Windows\System32\WS2_32.dll
+0x00007ffecb840000 - 0x00007ffecb864000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffec4ac0000 - 0x00007ffec4aca000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffecb3c0000 - 0x00007ffecb3ed000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffececd0000 - 0x00007ffeced1a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffec1630000 - 0x00007ffec163f000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\verify.dll
+0x00007ffebc030000 - 0x00007ffebc059000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\java.dll
+0x00007ffebbef0000 - 0x00007ffebbf06000 	C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dgroovy.home=C:\Users\pbs-rosyid/.groovy -Djava.system.class.loader=groovy.lang.GroovyClassLoader -Xmx2048m -Dfile.encoding=UTF-8 
+java_command: org.codehaus.groovy.tools.GroovyStarter --classpath C:\Users\pbs-rosyid\Katalon Studio\Test\bin\keyword;C:\Users\pbs-rosyid\Katalon Studio\Test\Keywords;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\listener;C:\Users\pbs-rosyid\Katalon Studio\Test\Test Listeners;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\lib;C:\Users\pbs-rosyid\Katalon Studio\Test\Libs;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\groovy;C:\Users\pbs-rosyid\Katalon Studio\Test\Include\scripts\groovy;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\plugins\com.kms.katalon.core_1.0.0.202201190711.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2
+java_class_path (initial): C:\Users\pbs-rosyid\Katalon Studio\Test\bin\keyword;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\listener;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\lib;C:\Users\pbs-rosyid\Katalon Studio\Test\bin\groovy;C:\Users\pbs-rosyid\Katalon Studio\Test\bin;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\plugins\com.kms.katalon.core_1.0.0.202201190711.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\aalto-xml-1.0.0.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\aspectjweaver-1.9.1.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\bcpkix-jdk15on-1.64.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\bcprov-jdk15on-1.64.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\browsermob-core-2.1.5.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\cglib-3.2.10.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-codec-1.10.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-collections4-4.1.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\commons-validator-1.6.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\curvesapi-1.04.jar;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5\configuration\resources\lib\dns
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Users/pbs-rosyid/Downloads/Katalon_Studio_Windows_64-8.2.5/Katalon_Studio_Windows_64-8.2.5/jre/bin/server;C:/Users/pbs-rosyid/Downloads/Katalon_Studio_Windows_64-8.2.5/Katalon_Studio_Windows_64-8.2.5/jre/bin;C:/Users/pbs-rosyid/Downloads/Katalon_Studio_Windows_64-8.2.5/Katalon_Studio_Windows_64-8.2.5/jre/lib/amd64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\nodejs\;C:\Users\pbs-rosyid\AppData\Local\Microsoft\WindowsApps;;C:\Users\pbs-rosyid\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\BrowserStackLocal\;C:\Users\pbs-rosyid\Downloads\Katalon_Studio_Windows_64-8.2.5\Katalon_Studio_Windows_64-8.2.5;
+USERNAME=pbs-rosyid
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.1500)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8259292k(342168k free), swap 23805912k(5460k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.282-b08) for windows-amd64 JRE (Zulu 8.52.0.23-CA-win64) (1.8.0_282-b08), built on Jan 12 2021 07:45:49 by "tester" with MS VC++ 10.0 (VS2010)
+
+time: Fri Mar 25 20:18:52 2022
+timezone: SE Asia Standard Time
+elapsed time: 0.115598 seconds (0d 0h 0m 0s)
+
